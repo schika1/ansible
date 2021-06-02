@@ -1,0 +1,12 @@
+- name: Download jenkins repo
+  get_url: url={{ jenkins_repo_url }} dest={{ jenkins_repo_folder }}
+
+- name: Update Package Manager
+  command: sudo rpm --import {{ package_manager_key }}
+
+- name: Install Jenkins
+  yum: 
+    name: jenkins
+
+- name: Start Jenkins service if not started
+  action: service name=jenkins state=started

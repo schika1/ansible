@@ -1,0 +1,17 @@
+- name: Upgrading repository
+  command: yum upgrade -y
+
+- name: Updating OS
+  command: yum update -y
+
+- name: Installing git
+  yum:
+    name: git
+
+- name: Installing wget
+  yum: 
+    name: wget
+
+- name: Installing JAVA_8
+  yum: 
+    name: java-1.8.0-openjdk-devel

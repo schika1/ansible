@@ -1,0 +1,7 @@
+- hosts: all
+  become: true
+  tasks:
+    - name: Restarting Jenkins server
+      service:
+        name: jenkins
+        state: restarted

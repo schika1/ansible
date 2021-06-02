@@ -1,0 +1,7 @@
+- name: Installing httpd
+  yum: 
+    name: httpd
+
+- name: Updating OS
+  command: yum update -y
+
